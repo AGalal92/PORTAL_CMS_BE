@@ -36,54 +36,54 @@ $RECYCLE.BIN/
 # Packages
 ############################
 
-*.7z
-*.csv
-*.dat
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.seed
-*.so
-*.swo
-*.swp
-*.swn
-*.swm
-*.out
-*.pid
+# *.7z
+# *.csv
+# *.dat
+# *.dmg
+# *.gz
+# *.iso
+# *.jar
+# *.rar
+# *.tar
+# *.zip
+# *.com
+# *.class
+# *.dll
+# *.exe
+# *.o
+# # *.seed
+# *.so
+# *.swo
+# *.swp
+# *.swn
+# *.swm
+# *.out
+# *.pid
 
 
 ############################
 # Logs and databases
 ############################
 
-.tmp
-*.log
-*.sql
-*.sqlite
-*.sqlite3
+# .tmp
+# *.log
+# *.sql
+# *.sqlite
+# *.sqlite3
 
 
 ############################
 # Misc.
 ############################
 
-*#
-ssl
-.idea
-nbproject
-public/uploads/*
-!public/uploads/.gitkeep
-.tsbuildinfo
-.eslintcache
+# *#
+# ssl
+# .idea
+# nbproject
+# public/uploads/*
+# !public/uploads/.gitkeep
+# .tsbuildinfo
+# .eslintcache
 
 ############################
 # Node.js
