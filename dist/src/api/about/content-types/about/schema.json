@@ -1,23 +1,39 @@
 {
-    "kind": "singleType",
+    "kind": "collectionType",
     "collectionName": "abouts",
     "info": {
         "singularName": "about",
         "pluralName": "abouts",
-        "displayName": "About",
-        "description": "Write about yourself and the content you create"
+        "displayName": "about",
+        "description": ""
     },
     "options": {
-        "draftAndPublish": false
+        "draftAndPublish": true
     },
     "pluginOptions": {},
     "attributes": {
         "title": {
             "type": "string"
         },
-        "blocks": {
-            "type": "dynamiczone",
-            "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+        "slug": {
+            "type": "text"
+        },
+        "description": {
+            "type": "blocks"
+        },
+        "image": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files"
+            ]
+        },
+        "list": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.text"
         }
     }
 }

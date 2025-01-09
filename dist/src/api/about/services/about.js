@@ -1,6 +1,6 @@
 "use strict";
 /**
- * about service.
+ * about service
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const strapi_1 = require("@strapi/strapi");
