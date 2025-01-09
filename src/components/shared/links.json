@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_links",
+  "info": {
+    "displayName": "links",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "text"
+    }
+  }
+}

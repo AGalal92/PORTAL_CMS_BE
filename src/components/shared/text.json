@@ -12,9 +12,7 @@
     "logo": {
       "allowedTypes": [
         "images",
-        "files",
-        "videos",
-        "audios"
+        "files"
       ],
       "type": "media",
       "multiple": true
