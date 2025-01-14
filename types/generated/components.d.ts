@@ -82,6 +82,17 @@ export interface SharedSocial extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTags extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tags';
+  info: {
+    description: '';
+    displayName: 'tags';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+  };
+}
+
 export interface SharedText extends Struct.ComponentSchema {
   collectionName: 'components_shared_texts';
   info: {
@@ -104,6 +115,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.social': SharedSocial;
+      'shared.tags': SharedTags;
       'shared.text': SharedText;
     }
   }

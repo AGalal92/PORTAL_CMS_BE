@@ -19,7 +19,7 @@ export default factories.createCoreController('api::work.work', ({ strapi }) => 
     } else {
       ctx.query = {
         ...ctx.query,
-        populate: ['image', 'link'], // Default population for other queries
+        populate: ['image', 'link', 'tag', 'project_image'], // Default population for other queries
       };
     }
 
@@ -32,11 +32,15 @@ export default factories.createCoreController('api::work.work', ({ strapi }) => 
     }
 
     // Default transformation for non-section queries
-    const transformedData = data.map(item => {
-      const image = (item.image || []).map(imageItem => imageItem.url || null);
+    const transformedData = data.map((item) => {
+      const image = (item.image || []).map((imageItem) => imageItem.url || null);
+      const project_image = (item.project_image || []).map(
+        (projectImageItem) => projectImageItem.url || null
+      );
 
       return {
         ...item,
+        project_image, // Include only the URLs for project images
         image, // Include extracted image URLs
       };
     });

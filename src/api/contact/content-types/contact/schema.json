@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contact",
     "pluralName": "contacts",
-    "displayName": "contact"
+    "displayName": "contact",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,9 +17,6 @@
     },
     "email": {
       "type": "string"
-    },
-    "subject": {
-      "type": "blocks"
     },
     "message": {
       "type": "blocks"

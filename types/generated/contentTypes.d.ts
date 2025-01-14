@@ -506,6 +506,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiContactContact extends Struct.CollectionTypeSchema {
   collectionName: 'contacts';
   info: {
+    description: '';
     displayName: 'contact';
     pluralName: 'contacts';
     singularName: 'contact';
@@ -527,7 +528,6 @@ export interface ApiContactContact extends Struct.CollectionTypeSchema {
     message: Schema.Attribute.Blocks;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    subject: Schema.Attribute.Blocks;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -675,6 +675,7 @@ export interface ApiVendorVendor extends Struct.CollectionTypeSchema {
 export interface ApiWorkWork extends Struct.CollectionTypeSchema {
   collectionName: 'works';
   info: {
+    description: '';
     displayName: 'work';
     pluralName: 'works';
     singularName: 'work';
@@ -696,8 +697,13 @@ export interface ApiWorkWork extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::work.work'> &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
+    project_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String;
+    tag: Schema.Attribute.Component<'shared.tags', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
